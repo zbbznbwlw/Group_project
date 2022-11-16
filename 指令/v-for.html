@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for小案例</title>
+    <script type="text/javascript" src="../JS/vue.js"></script>
+</head>
+<body>
+    <div id="name">
+        <ul>
+            <li v-for="(item,index) in items" :key="index">{{item}}</li>
+        </ul>
+            ------------------
+        <ul>
+            <li v-for="(value,index) in subject">
+                 {{index}}:{{value}}
+            </li>
+        </ul>
+            ------------------
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>高度</td>
+            </tr>
+            <tr v-for="(animal,index) in animals" :key="index">
+                <td>{{animal.name}}</td>
+                <td>{{animal.age}}</td>
+                <td>{{animal.long}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        var vue = new Vue({
+            el:"#name",
+            data:{
+                items:['淘宝','淘特','京东','天猫'],
+
+                subject:{
+                    编号:001,
+                    学科:'语文',
+                    学时:108
+                },
+
+                animals: [
+                    {
+                        name:'panda',
+                        age:6,
+                        long:50
+                    },
+                    {
+                        name:'bear',
+                        age:7,
+                        long:80
+                    },
+                    {
+                        name:'dog',
+                        age:8,
+                        long:30
+                    }
+                ]
+            }
+        })
+        vue.animals.push({name:'pig',age:1,long:50})
+    </script>
+</body>
+</html>
+
+<!-- v-for:遍历data中的数据 -->
+<!-- v-for指令需要使用item in items -->
+<!-- items是源数据数组，item是被迭代的数组元素的别名 -->
+<!-- (item,index)item是数组中的元素，index类似索引 -->

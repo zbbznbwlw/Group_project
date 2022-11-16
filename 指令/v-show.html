@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show</title>
+    <script type="text/javascript" src="../JS/vue.js"></script>
+</head>
+<body>
+    <div id="test">
+        <div v-show="flag">v-show</div>
+        <input type="button" @click="toggle()" value="隐藏/显示"/>
+    </div>
+
+    <script>
+        var vue =new Vue({
+            el:'#test',
+            data : {
+                flag : true
+            },
+            methods: {
+                toggle : function() {
+                    this.flag = !this.flag;
+                }
+            },
+        })
+    </script>
+</body>
+</html>
