@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+
+        .maxbox {
+            width: 60%;
+            height: 1600px;
+            border: 1px solid black;
+            margin-left: 20%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: rgba(235, 253, 253, 0.5);
+
+        }
+
+        .title_box {
+            display: block;
+            width: 100%;
+
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .small_box_one {
+            width: 9%;
+            height: 100%;
+            border: 1px solid black;
+            float: left;
+        }
+
+        .small_box_title {
+            width: 9%;
+            height: 100%;
+            border: 1px solid black;
+            float: left;
+        }
+
+        .small_box {
+            width: 9%;
+            height: 49px;
+            border: 1px solid black;
+            float: right;
+        }
+
+        .shoptitle_box {
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .shoptitle_box_li {
+            width: 12%;
+            height: 49px;
+            margin-left: 12px;
+            margin-right: 10px;
+            float: right;
+            border: 1px solid black;
+        }
+
+        .shop_content_box {
+            width: 100%;
+            height: 1600px;
+            border: 1px solid black;
+            margin-top: 30px;
+        }
+
+        .shop_content_smallbox {
+            display: inline-block;
+            width: 210px;
+            height: 280px;
+            border: 1px solid black;
+            margin-top: 55px;
+            margin-left: 50px;
+
+
+        }
+    </style>
+    <script type="text/javascript" src="../shop/js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 整体框架 -->
+    <div class="maxbox">
+        <!-- 标题框架 -->
+        <div class="title_box">
+
+
+            <div class="small_box_one"></div>
+            <div class="small_box"></div>
+            <div class="small_box"></div>
+            <div class="small_box"></div>
+
+
+
+        </div>
+        <!-- 商品类别名称框架 -->
+        <div class="shoptitle_box">
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+            <div class="shoptitle_box_li"> </div>
+        </div>
+
+
+
+
+        <div class="shop_content_box">
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+
+
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+            <div class="shop_content_smallbox"></div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false
+    new Vue({
+        el: "#root",
+        data: {
+            name: '李华'
+        }
+
+    })
+</script>
+
+</html>
